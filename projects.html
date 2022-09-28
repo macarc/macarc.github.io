@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Macarc</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="enlarge-images.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Macarc</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+    <main>
+      <h1>Projects</h1>
+      <section class="project">
+        <h2>PipeScore</h2>
+        <img
+          class="full"
+          src="pipescore.jpeg"
+          alt="the PipeScore interface"
+        />
+        <p>
+          PipeScore is an online bagpipe notation app, for writing out pipe
+          music.
+        </p>
+        <p>Features include:</p>
+        <ul>
+          <li>Reactive embellishments - a faster way to input gracenotes</li>
+          <li>Built-in documentation</li>
+          <li>Undo / Redo</li>
+          <li>Automatic note grouping and spacing</li>
+          <li>Automatic saving</li>
+          <li>Sharing using URLs</li>
+          <li>Playback</li>
+          <li>Parts, repeats, second timings</li>
+          <li>Ties, triplets, time signatures, text boxes</li>
+          <li>8000 lines of code</li>
+        </ul>
+        <div class="links">
+          <a href="https://pipescore.web.app">Try it!</a>
+          <a href="https://github.com/macarc/pipescore">Code</a>
+        </div>
+      </section>
+      <section class="project">
+        <h2>Bullet Wordle</h2>
+        <img class="half centre" src="bullet-wordle.png" alt="bullet wordle game" />
+        <p>Bullet Wordle is a Wordle variant where two players play on the same board, and try to guess the word before each other and before their time runs out.</p>
+        <p>When you begin a game, you will be paired with another player also using the website.</p>
+        <div class="links">
+          <a href="https://bulletwordle.herokuapp.com">Try it!</a>
+          <a href="https://github.com/macarc/bullet-wordle">Code</a>
+        </div>
+      </section>
+      <section class="project">
+        <h2>Dowling Tables</h2>
+        <img class="full" src="dowling-tables.png" alt="verbs in indicative active" />
+        <p>The Dowling Tables help you to memorise the Latin declensions and conjugations necessary for the <a href="http://wcdrutgers.net/Latin.htm">Dowling Method</a>.</p>
+        <p>It supports macrons - even if your keyboard doesn't - and gives immediate feedback when you make a mistake.</p>
+        <div class="links">
+          <a href="https://dowling-tables.web.app">Try it!</a>
+          <a href="https://github.com/macarc/Dowling-Tables">Code</a>
+        </div>
+      </section>
+      <section class="project">
+        <h2>GrannyPlant</h2>
+        <div class="img-holder">
+          <img class="quarter" src="home.png" alt="grannyplant home view" />
+          <img class="quarter" src="plant.png" alt="grannyplant plant view" />
+          <img class="quarter" src="search.png" alt="grannyplant search view" />
+          <img class="quarter" src="areas.png" alt="grannyplant areas view" />
+        </div>
+        <p>
+          GrannyPlant is a Progressive Web App to help granny manage her massive
+          garden.
+        </p>
+        <p>It replaces a set of huge cross-referenced Word documents.</p>
+        <p>
+          The app works when offline, and allows adding/removing plants,
+          searching plants, view plants by area, e.t.c.
+        </p>
+        <div class="links">
+          <a href="https://github.com/macarc/re-grannyplant">Code</a>
+        </div>
+      </section>
+      <section>
+        <h2>Replit Colour</h2>
+        <img
+          class="full"
+          src="replit.jpeg"
+          alt="Replit-colour customisation page"
+        />
+        <p>
+          Replit colour is a Chrome extension that allows the customisation of
+          the colour scheme on the popular
+          <a href="https://replit.com">replit</a> IDE.
+        </p>
+        <p>
+          Using a simple colour-picker form, you can change the themeing of the
+          editor to whatever you like.
+        </p>
+        <p>
+          Usage details
+          <a
+            href="https://repl.it/talk/announcements/Customising-replit-syntax-highlighting-with-replit-color/16656"
+            >here</a
+          >.
+        </p>
+        <p>Over 200 users!</p>
+        <div class="links">
+          <a
+            href="https://chrome.google.com/webstore/detail/replit-color/oogkaegkckcmaolnlhbaoppgppblbnhe?page=1&hl=en&itemlang=ru"
+            >Try it!</a
+          >
+          <a href="https://github.com/macarc/repl.it-color">Code</a>
+        </div>
+      </section>
+    </main>
+    <div
+      id="img-modal"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100vw;
+        height: 100vh;
+        display: none;
+      "
+      onclick="this.style.display = 'none'"
+    >
+      <img id="modal-img" style="position: fixed" />
+    </div>
+  </body>
+</html>
