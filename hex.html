@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="charset" content="UTF8" />
+    <meta name="viewport" content="device-width, initial-scale=1" />
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+    <title>Hex Trainer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="hex.js"></script>
+<style>
+#target {
+  font-family: monospace;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-left: 0.5rem;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+
+#pre-input {
+  font-family: monospace;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+label {
+  display: block;
+  font-weight: bold;
+}
+label.mode-type {
+  font-weight: normal;
+}
+input[type="text"], input[type="number"] {
+  width: 5rem;
+}
+#number-of-digits {
+  display: block;
+}
+</style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Macarc</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+    <main>
+      <h1>Hex Trainer</h1>
+      <section>
+      <p id="target"></p>
+      <form action="" autocomplete="off">
+        <span id="pre-input"></span><input id="user-input" placeholder="Type decimal..." />
+      </form>
+      </section>
+
+      <h2>Options</h2>
+      <section>
+      <label>
+        Number of digits:
+        <!-- Can't go above 13 without running into limits with Math.random() -->
+        <input id="number-of-digits" type="number" min="1" max="12" value="2">
+      </label>
+      <label for="training-mode">
+        Mode:
+        <label class="mode-type"><input type="radio" id="hex-to-dec" name="training-mode" value="hex-to-dec" checked> Hex to Decimal</label>
+        <label class="mode-type"><input type="radio" id="dec-to-hex" name="training-mode" value="dec-to-hex"> Decimal to Hex</label>
+      </label>
+      </section>
+    </main>
+  </body>
+</html>
