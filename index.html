@@ -1,26 +1,280 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
     <title>Macarc</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="enlarge-images.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html">Macarc</a>
-      <a href="projects.html">Projects</a>
-    </nav>
-    <main>
-      <h1>Macarc</h1>
-      <p>Currently studying Acoustics in University, <br>and programming, Latin, bagpipes, chess, juggling, button box and Tolkien out of University.</p>
-      <h2>Various links</h2>
-      <ul>
-        <li><a href="https://pipescore.web.app">PipeScore</a></li>
-        <li><a href="https://github.com/macarc">GitHub</a></li>
-        <li><a href="hex.html">Hex Trainer</a></li>
-        <li><a href="https://discourse.nixos.org/t/gnome-broke-after-trying-plasma/16019">Fix broken/disappearing cursor on GNOME (Wayland)</a></li>
-      </ul>
+    <header>
+      <h1><a href="/">Archie Maclean</a></h1>
+    </header>
 
+    <section class="page">
+      <section class="toplevel">
+        <h2>About me</h2>
+
+        <p>
+          I've recently finished an undergraduate Acoustics and Music Technology
+          degree. I have experience in Python, TypeScript,
+          <span class="no-break">C++</span> and MATLAB. Throughout my degree
+          I've been exposed to DSP, computer communications, real-time audio software,
+          data analysis and sound design.
+        </p>
+        <p>
+          In my spare time, I enjoy programming, playing Scottish/Irish
+          traditional music (on bagpipes, whistle, flute, and guitar), and
+          reading. I am &lsquo;learning&rsquo; Gaelic, Ancient Greek and Latin.
+          I also love sailing, although I haven't been out in a boat for a while
+          now.
+        </p>
+      </section>
+
+      <section class="toplevel">
+        <h2>Some useless skills</h2>
+        <ul>
+          <li>Juggling</li>
+          <li>Chess</li>
+          <li>Rubik's cube speed-solving</li>
+          <li>Unicycle</li>
+        </ul>
+      </section>
+
+      <section class="toplevel breakable">
+        <h2>Books</h2>
+
+        <p>
+          Starting in May 2026, I'll try to keep this list of books I've read
+          up-to-date.
+        </p>
+
+        <section>
+          <h3>May 2026</h3>
+          <ul>
+            <li><i>Moby-Dick</i>, Herman Melville</li>
+            <li><i>A Christmas Carol</i>, Charles Dickens</li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="toplevel">
+        <h2>Various links</h2>
+
+        <ul>
+          <li><a href="mailto:pipescore@outlook.com">Email me!</a></li>
+          <li><a href="https://pipescore.web.app">PipeScore</a></li>
+          <li><a href="https://github.com/macarc">GitHub</a></li>
+          <li><a href="hex.html">Hex Trainer</a></li>
+          <li>
+            <a
+              href="https://discourse.nixos.org/t/gnome-broke-after-trying-plasma/16019"
+              >Fix broken/disappearing cursor on GNOME (Wayland)</a
+            >
+          </li>
+          <li><a href="https://www.ceolsean.net/">Ceol Sean</a></li>
+        </ul>
+      </section>
+    </section>
+
+    <hr />
+
+    <section class="page">
+      <section class="toplevel breakable">
+        <h2>Projects</h2>
+
+        <section>
+          <h3>PipeScore (2018-present)</h3>
+          <img
+            class="project-image"
+            src="images/pipescore.png"
+            alt="PipeScore bagpipe notation interface"
+          />
+
+          <p>A web application for writing out bagpipe music.</p>
+          <p>Features include:</p>
+          <ul>
+            <li>Reactive embellishments - a faster way to input gracenotes</li>
+            <li>Built-in documentation</li>
+            <li>Undo / Redo</li>
+            <li>Automatic note grouping and spacing</li>
+            <li>Sharing using URLs</li>
+            <li>Playback</li>
+            <li>Parts, repeats, second timings</li>
+            <li>Ties, triplets, time signatures, text boxes</li>
+            <li>Importing from the Bagpipe Music Writer format</li>
+            <li>Automatic saving, downloading and uploading of files</li>
+            <li>Over 2500 users!</li>
+          </ul>
+
+          <div class="links">
+            <a href="https://pipescore.web.app">Try it!</a>
+            <a href="https://github.com/macarc/PipeScore">Code</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>WebGPU Raytracing Project (2025-26)</h3>
+
+          <img
+            src="images/webgpu.png"
+            alt="WebGPU project simulation"
+            class="project-image"
+          />
+
+          <p>
+            My undergraduate dissertation project: audio ray-tracing on GPU. It
+            uses the (fairly new) WebGPU API to implement fast ray-tracing in
+            the browser. More details will be coming soon!
+          </p>
+
+          <div class="links">
+            <a href="https://macarc.github.io/webgpu-raytracing-project"
+              >Try it!</a
+            >
+            <a href="https://github.com/macarc/webgpu-raytracing-project"
+              >Code</a
+            >
+          </div>
+        </section>
+
+        <section>
+          <h3>Bullet Wordle (2022)</h3>
+
+          <img
+            src="images/bullet-wordle.png"
+            alt="Bullet wordle - a wordle-like interface with timers showing that each user is trying to guess the word before their time runs out."
+            class="project-image vertical-image"
+          />
+
+          <p>
+            A Wordle variant where two players play on the same board, and try
+            to guess the word before each other and before their time runs out.
+          </p>
+          <p>
+            When you begin a game, you will be paired with another player also
+            using the website.
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/macarc/bullet-wordle">Code</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>Dowling Tables (2022)</h3>
+
+          <img
+            src="images/dowling-tables.png"
+            alt="Dowling tables application, showing the user declining the verb laudō"
+            class="project-image"
+          />
+
+          <p>
+            The Dowling Tables help you to memorise the Latin declensions and
+            conjugations necessary for the
+            <a href="http://wcdrutgers.net/Latin.htm">Dowling Method</a>.
+          </p>
+          <p>
+            It supports macrons - even if your keyboard doesn't - and gives
+            immediate feedback when you make a mistake.
+          </p>
+
+          <div class="links">
+            <a href="https://dowling-tables.web.app/">Try it!</a>
+            <a href="https://github.com/macarc/Dowling-Tables">Code</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>GrannyPlant (2021-22)</h3>
+
+          <div class="img-holder">
+            <img
+              class="project-image"
+              src="images/home.png"
+              alt="GrannyPlant home view"
+            />
+            <img
+              class="project-image"
+              src="images/plant.png"
+              alt="GrannyPlant plant view"
+            />
+            <img
+              class="project-image"
+              src="images/search.png"
+              alt="GrannyPlant search view"
+            />
+            <img
+              class="project-image"
+              src="images/areas.png"
+              alt="GrannyPlant areas view"
+            />
+          </div>
+
+          <p>
+            A Progressive Web App to help granny manage her massive garden,
+            replacing a set of huge cross-referenced Word documents.
+          </p>
+
+          <p>
+            The app works when offline, and allows adding/removing plants,
+            searching plants, view plants by area, e.t.c.
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/macarc/re-grannyplant">Code</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>repl.it-color (2019-21)</h3>
+
+          <img
+            src="images/replit.jpeg"
+            alt="repl.it-color extension theme customisation screen"
+            class="project-image"
+          />
+
+          <p>
+            repl.it-color was a Chrome extension that allowed the customisation
+            of the colour scheme on the popular
+            <a href="https://replit.com">repl.it</a> IDE. It had over 200 users,
+            but is now defunct since repl.it eventually added a method for
+            built-in theme customisation (&hellip;and now have pivoted to
+            no-code AI).
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/macarc/repl.it-color">Code</a>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <hr />
+
+    <section class="page">
+      <p class="last-update-date">This site was last updated in May 2026.</p>
+    </section>
+
+    <div
+      id="modal-container"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        cursor: pointer;
+      "
+    >
+      <img id="modal-img" style="position: fixed" />
+    </div>
   </body>
 </html>

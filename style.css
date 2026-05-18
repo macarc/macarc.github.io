@@ -1,71 +1,118 @@
-body {
-  font-family: sans-serif;
-  background-color: #eef;
-  font-size: 1.1rem;
-  color: #222;
-}
-p {
-  line-height: 1.7rem;
-}
-nav {
-  margin: 3rem;
-  font-size: 1.2rem;
-  text-align: center;
-}
-nav a {
-  margin: 0rem 1rem;
-}
-a {
-  font-family: monospace;
-}
-main {
-  margin: 0rem 1rem;
-}
-h1 {
-  margin: 2rem 0rem;
-}
-img {
-  cursor: pointer;
-}
-img.full {
-  margin-left: 20%;
-  width: 60%;
-}
-img.half {
-  width: 30%;
-}
-img.quarter {
-  width: 15%;
-}
-img.centre {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-.img-holder {
-  margin-left: 20%;
-}
-section {
-  /* border: 1px solid black; */
-  padding: 1rem;
-  background-color: #ddf;
-  margin-bottom: 1rem;
-}
-.links {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.links a {
-  font-size: 1rem;
-  margin-right: 2rem;
-}
-li {
-  margin-bottom: 0.2rem;
+/* Font: Newsreader */
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
+
+* {
+  font-family: "Newsreader", serif;
+  line-height: 1.4;
 }
 
-@media only screen and (min-width: 1000px) {
-  main {
-    width: 60vw;
-    margin: auto;
+header h1 {
+  text-align: center;
+  padding: 0rem;
+  font-size: 2.4rem;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  border-bottom: 1px solid black;
+}
+
+section.page:first-of-type {
+  margin-top: 2rem;
+}
+
+section.page {
+  max-width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  columns: 3;
+  column-gap: 1.6rem;
+}
+
+hr {
+  margin: 3rem auto;
+  max-width: calc(0.8 * 60vw);
+}
+
+@media only screen and (max-width: 950px) {
+  section.page {
+    columns: 2;
   }
+}
+
+@media only screen and (max-width: 650px) {
+  section.page {
+    columns: 1;
+    max-width: 80vw;
+  }
+
+  hr {
+    max-width: calc(0.8 * 80vw);
+  }
+}
+
+section:not(.breakable),
+ul,
+p {
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+}
+
+h2,
+h3,
+section.toplevel {
+  margin: 1rem 0 0;
+}
+
+section.toplevel:first-child,
+section.toplevel:first-child h2 {
+  margin: 0;
+}
+
+div.links {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  gap: 1rem;
+}
+
+p.last-update-date {
+  margin: 0 auto;
+  text-align: center;
+  width: 60vw;
+  padding-bottom: 1rem;
+}
+
+span.no-break {
+  white-space: nowrap;
+}
+
+img.project-image {
+  max-width: 100%;
+  margin: 1rem auto;
+  cursor: pointer;
+}
+
+img.project-image:hover {
+  opacity: 0.7;
+}
+
+div.img-holder {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+div.img-holder img.project-image {
+  margin: 0;
+  width: 20%;
+}
+
+img.project-image.vertical-image {
+  max-height: 10rem;
+  float: left;
+  margin: 1rem 1rem 0.5rem 0rem;
 }

@@ -5,7 +5,9 @@ let hexToDecimal = false;
 // Pull the new number of digits from the UI
 // and update the UI if necessary
 function updateNumberOfDigits() {
-  const newNumDigits = parseInt(document.querySelector("#number-of-digits").value);
+  const newNumDigits = parseInt(
+    document.querySelector("#number-of-digits").value,
+  );
   if (numDigits !== newNumDigits) {
     numDigits = newNumDigits;
     updateTarget();
@@ -47,23 +49,23 @@ function updateTarget() {
     target = min + Math.floor(Math.random() * (max - min));
   }
 
-  textBox().style.border = '';
-  textBox().value = '';
+  textBox().style.border = "";
+  textBox().value = "";
 
   if (hexToDecimal) {
     document.querySelector("#target").innerText = "0x" + target.toString(16);
     document.querySelector("#pre-input").innerText = "";
-    textBox().placeholder = "Type decimal..."
+    textBox().placeholder = "Type decimal...";
   } else {
     document.querySelector("#target").innerText = target.toString();
     document.querySelector("#pre-input").innerText = "0x";
-    textBox().placeholder = "Type hex..."
+    textBox().placeholder = "Type hex...";
   }
 }
 
 // Updates the UI to let the user know they got it wrong
 function signalError() {
-  textBox().style.border = '2px solid red';
+  textBox().style.border = "2px solid red";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -72,17 +74,18 @@ document.addEventListener("DOMContentLoaded", () => {
   updateTarget();
   textBox().focus();
 
-
-  document.querySelector("form").addEventListener("submit", e => {
+  document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
     if (userIsCorrect()) {
       updateTarget();
     } else {
       signalError();
     }
-  })
+  });
 
-  document.querySelector("#number-of-digits").addEventListener("input", updateNumberOfDigits);
+  document
+    .querySelector("#number-of-digits")
+    .addEventListener("input", updateNumberOfDigits);
   document.querySelector("#hex-to-dec").addEventListener("input", updateMode);
   document.querySelector("#dec-to-hex").addEventListener("input", updateMode);
 });
