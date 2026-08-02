@@ -12,8 +12,9 @@ def main():
     with open("chords.html", "r") as f:
         text = f.read()
 
-    matches = re.findall(r"%(.*)", text)
+    matches = re.findall(r"%([^<]*)", text)
     for match in matches:
+        print(match)
         files_to_insert = sorted(Path.glob(Path(), f"../images/chords/{match}_*.svg"))
         text_to_insert = "\n".join(map(path_to_svg, files_to_insert))
         
